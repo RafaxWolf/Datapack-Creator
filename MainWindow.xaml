@@ -1,0 +1,68 @@
+﻿<Window x:Class="TestWindow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:TestWindow"
+        WindowStartupLocation="CenterScreen"
+        Title="Datapack Creator" Height="600" Width="800">
+
+    <DockPanel Background="#222">
+
+        <!-- Contenido principal -->
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Margin="20,30,20,100" Background="#cc2a2a2a" CornerRadius="10" Padding="20">
+                <StackPanel VerticalAlignment="Top" Width="270" Margin="22">
+                    <TextBlock Text="Datapack Creator" FontSize="20" FontWeight="Bold" Foreground="White" Margin="50,0,0,20"/>
+
+                    <!-- Crear Proyecto -->
+                    <Button Style="{StaticResource MainMenuButton}" Click="Create_Project">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+                            <!-- <TextBlock Text="📁" FontSize="24" VerticalAlignment="Center"/> -->
+                            <Image Source="/Assets/Icons/create.png" Width="24" Margin="0,0,10,0"/>
+                            <StackPanel Margin="10,0,0,0">
+                                <TextBlock Text="Crear Proyecto" FontSize="15" Foreground="White"/>
+                                <TextBlock Text="Crear un nuevo datapack" FontSize="11" Foreground="#888"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- Ajustador de Botones -->
+                    <StackPanel Margin="0,9,0,0"/>
+
+                    <!-- Abrir Proyecto -->
+                    <Button Style="{StaticResource MainMenuButton}" Click="Open_Project">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+                            <TextBlock Text="📂" FontSize="24" VerticalAlignment="Center"/>
+                            <StackPanel Margin="10,0,0,0">
+                                <TextBlock Text="Abrir Proyecto" FontSize="15" Foreground="White"/>
+                                <TextBlock Text="Abrir un datapack existente" FontSize="11" Foreground="#888"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- Ajustador de Botones -->
+                    <StackPanel Margin="0,9,0,0"/>
+
+                    <!-- Boton de Pruebas -->
+                    <Button Style="{StaticResource MainMenuButton}">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+                            <TextBlock Text="❔" FontSize="24" VerticalAlignment="Center"/>
+                            <StackPanel Margin="5,0,0,0">
+                                <TextBlock Text="Work In Progress" FontSize="15" Foreground="White"/>
+                                <TextBlock Text="Este boton esta en desarrollo..." FontSize="11" Foreground="Gray"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Button>
+
+                </StackPanel>
+            </Border>
+
+            
+        </Grid>
+    </DockPanel>
+</Window>

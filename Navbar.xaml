@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="TestWindow.Navbar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TestWindow"
+             Height="25">
+	<Grid Background="#333">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Opciones -->
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="0" Margin="10,0,0,0">
+
+            <!-- Archivo / File -->
+            <Button Content="File" Style="{StaticResource NavButtonStyle}" Click="Opt_Click" Tag="1"/>
+
+            <!-- Editar / Edit -->
+            <Button Content="Edit" Style="{StaticResource NavButtonStyle}" Click="Opt_Click" Tag="2"/>
+
+            <!-- MC Game Objects -->
+            <Button Content="MC Objects" Style="{StaticResource NavButtonStyle}" Click="Opt_Click" Tag="3"/>
+
+            <!-- Modelos -->
+            <Button Content="Models" Style="{StaticResource NavButtonStyle}" Click="Opt_Click" Tag="4"/>
+
+            <!-- Texturas -->
+            <Button Content="Textures" Style="{StaticResource NavButtonStyle}" Click="Opt_Click" Tag="5"/>
+
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="1" Margin="0,0,10,0">
+
+            <!-- Preferencias -->
+            <Button Content="Window" Style="{StaticResource NavButtonStyle}" Click="OpenConfigs_Click"/>
+
+            <!-- Ayuda -->
+            <Button Content="Help" Style="{StaticResource NavButtonStyle}" Click="OpenHelp_Click"/>
+
+        </StackPanel>
+    </Grid>
+</UserControl>
